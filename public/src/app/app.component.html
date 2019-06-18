@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="container">
+  <div class="input">
+    <h3>Submit a cake to be rated</h3>
+
+    <form (submit)="createCakes()">
+      <label>baker name:</label>
+      <input type="text" name="newCake.name" [(ngModel)]="newCake.name" />
+      <label>image url:</label>
+      <input type="text" name="newCake.url" [(ngModel)]="newCake.url" />
+      <button type="submit" value="Create Cake">Create Cake</button>
+    </form>
+  </div>
+  <div class="cakes">
+    <div *ngFor="let cake of cakes; let i = index">
+      <div class="comments">
+        <img (click)="toggleInfo(i)" src="{{cake.url}}" alt="cake.name">
+        <div class="comment-form">
+          <form  (submit)="newComments(cake._id, i)">
+            <p>{{ newComment[i] | json}}</p>
+            <select name="newComment[i].rate" [(ngModel)]="newComment[i].rate">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <input type="text" name="newComment[i].comment" [(ngModel)]="newComment[i].comment">
+            <button type="submit" value="Create Cake">Create Cake</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="width: 801px; height: 400">
+    <app-cake-info *ngIf="appShowInfo" [showInfo]= "appShowInfo"></app-cake-info> 
+  </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,57 @@
+* {
+    vertical-align: top;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    vertical-align: top;
+    width: 801px;
+    height: 401px;
+    margin: auto;
+}
+
+label {
+    display: block;
+}
+input {
+    display: block;
+}
+
+.input {
+    vertical-align: top;
+    display: inline-block;
+    width: auto;
+    height: 400px;
+    border: solid 1px red;
+}
+
+.cakes {
+    vertical-align: top;
+    display: inline-block;
+    width: 593px;
+    height: 400px;
+    border: solid 1px red;
+    overflow: scroll;
+}
+
+.indiv-comment {
+
+}
+
+
+img {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+}
+
+
+.comments {
+    width: 593px;
+    height: 200px;
+}
+
+.comment-form {
+    display: inline-block;
+}

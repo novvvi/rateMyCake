@@ -1,0 +1,30 @@
+* {
+    vertical-align: top;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+h2 {
+    display: block;
+}
+
+img {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+}
+
+h3 {
+    display: inline-block;
+}
+
+.comments {
+    display: inline-block;
+    overflow: scroll;
+    height: 200px;
+}
+
+.comment {
+    display: block;
+    margin: 5px;
+}
